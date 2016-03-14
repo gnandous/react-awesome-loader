@@ -1,0 +1,48 @@
+{
+  "name": "react-awesome-loader",
+  "version": "1.0.0",
+  "description": "facebook mock content placeholder",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "build-demo": "webpack -p",
+    "demo": "webpack-dev-server --config webpack.config.dev.js",
+    "lint": "eslint src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gnandous/react-awesome-loader.git"
+  },
+  "keywords": [
+    "React",
+    "loader",
+    "javascript",
+    "es6"
+  ],
+  "author": "GNANDOU SOULEYMANE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gnandous/react-awesome-loader/issues"
+  },
+  "homepage": "https://github.com/gnandous/react-awesome-loader#readme",
+  "devDependencies": {
+    "babel-loader": "^5.3.1",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+ "dependencies": {
+    "babel": "^5.6.23",
+    "babel-polyfill": "^6.5.0",
+    "style-loader": "^0.8.3",
+    "babel-core": "^5.6.20",
+    "classnames": "^2.1.3",
+    "es6-promise": "^3.0.2",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.7",
+    "react-dom": "^0.14.0-rc1",
+    "lodash": "^4.0.1"
+  }
+}
