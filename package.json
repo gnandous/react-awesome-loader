@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "facebook mock content placeholder",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,10 @@
     "demo": "webpack-dev-server --config webpack.config.dev.js",
     "lint": "eslint src/**"
   },
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/gnandous/react-awesome-loader.git"
