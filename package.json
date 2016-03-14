@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-loader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "facebook mock content placeholder",
   "main": "index.js",
   "scripts": {
@@ -44,6 +44,7 @@
     "babel-core": "^5.6.20",
     "classnames": "^2.1.3",
     "es6-promise": "^3.0.2",
+    "css-loader": "^0.23.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.7",
     "react-dom": "^0.14.0-rc1",
