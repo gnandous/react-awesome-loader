@@ -1,7 +1,5 @@
 # react-awesome-loader
-<<<<<<< HEAD
 Facebook like content placeholder for react
-=======
 
 A loader facebook like based on mockup style content placeholder.
 
@@ -27,4 +25,3 @@ indicates the times a single item of the loader should be displayed. For example
 ## License
 
 ISC
->>>>>>> origin/feat-develop
