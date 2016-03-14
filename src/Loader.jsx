@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import './loader.css';
 
 class Loader extends React.Component {
   /**
