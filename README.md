@@ -11,7 +11,7 @@ Alternatively, run it locally:
 
 ```
 npm install
-npm run demo
+npm run build
 ```
 
 ## Props

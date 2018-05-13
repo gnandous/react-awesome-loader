@@ -1,35 +1,35 @@
-const webpack = require('webpack');
+const path = require('path');
 
+const port = process.env.PORT || 8080;
 module.exports = {
   entry: {
-    app: ['./demo/demo.jsx']
+    app: ['./demo/demo.jsx'],
   },
   output: {
-    path: './demo/public',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'demo', 'public'),
+    filename: 'bundle.js',
+    publicPath: `//0.0.0.0:${port}/public/`,
   },
+  mode: 'development',
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!'
+        use: ['style-loader', 'css-loader'],
       },
-    ]
+    ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': '"production"'
-      }
-    })
-  ]
+  devServer: {
+    contentBase: './demo/public',
+  },
 };
