@@ -11,9 +11,22 @@ Alternatively, run it locally:
 
 ```
 npm install
-npm run build
+npm run start:dev
 ```
 
+react-awesome-loader is also available as part of node modules.
+
+Just import the module and use it as follow:
+
+```
+import Loader from 'react-awesome-loader';
+
+const App = () => (
+  <Loader
+    nbrItems={2}
+    />
+);
+```
 ## Props
 
 ### nbrItems
