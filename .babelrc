@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }],
+    "@babel/react",
+    ["@babel/stage-2", { "decoratorsLegacy": true }]
+  ],
+  "plugins": ["transform-class-properties"]
+}

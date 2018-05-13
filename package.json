@@ -1,12 +1,11 @@
 {
   "name": "react-awesome-loader",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "facebook mock content placeholder",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "build-demo": "webpack -p",
-    "demo": "webpack-dev-server --config webpack.config.dev.js",
+    "start:dev": "webpack-dev-server",
+    "build": "webpack",
     "lint": "eslint src/**"
   },
   "files": [
@@ -30,24 +29,28 @@
   },
   "homepage": "https://github.com/gnandous/react-awesome-loader#readme",
   "devDependencies": {
-    "babel-loader": "^5.3.1",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.0.0",
-    "eslint-plugin-react": "^3.11.3",
-    "webpack": "^1.12.1",
-    "webpack-dev-server": "^1.10.1"
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.46",
+    "@babel/preset-stage-2": "^7.0.0-beta.46",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
   },
- "peerDependencies": {
-    "babel": "^5.6.23",
-    "babel-polyfill": "^6.5.0",
-    "style-loader": "^0.8.3",
-    "babel-core": "^5.6.20",
-    "classnames": "^2.1.3",
-    "es6-promise": "^3.0.2",
-    "css-loader": "^0.23.1",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.7",
-    "react-dom": "^0.14.0-rc1",
-    "lodash": "^4.0.1"
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   }
 }

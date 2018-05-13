@@ -1,35 +1,44 @@
-const webpack = require('webpack');
+const path = require('path');
+
+const port = process.env.PORT || 8080;
+
+let entryPoint = './src/Loader.jsx';
+
+if (path.basename(require.main.filename).match(/^webpack-dev-server\.js$/)) {
+  entryPoint = './demo/demo.jsx';
+}
+
 
 module.exports = {
   entry: {
-    app: ['./demo/demo.jsx']
+    app: entryPoint,
   },
   output: {
-    path: './demo/public',
-    filename: 'bundle.js'
+    libraryTarget: 'umd',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'loader.js',
+    publicPath: `//0.0.0.0:${port}/dist/`,
   },
+  mode: 'development',
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!'
+        use: ['style-loader', 'css-loader'],
       },
-    ]
+    ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': '"production"'
-      }
-    })
-  ]
+  devServer: {
+    contentBase: './demo/public',
+  },
 };
