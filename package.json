@@ -8,10 +8,6 @@
     "build": "webpack",
     "lint": "eslint src/**"
   },
-  "files": [
-    "lib",
-    "index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/gnandous/react-awesome-loader.git"
